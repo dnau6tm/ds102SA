@@ -7,10 +7,13 @@ from sklearn.feature_extraction.text import CountVectorizer
 
 class_list = {'0': 'Positive', '1': 'Neutral', '2': 'Negative'}
 
-X_train = pd.read_csv('./sents.txt', sep='\r\n', header=None, index_col=None, names = ['sents'])
+# X_train = pd.read_csv('./sents.txt', sep='\r\n', header=None, index_col=None, names = ['sents'])
 
-encoder = CountVectorizer(ngram_range = (1,1))
-encoder.fit(X_train['sents'])
+# encoder = CountVectorizer(ngram_range = (1,1))
+# encoder.fit(X_train['sents'])
+
+en_md = open('./ec_vsfc.pkl', 'rb')
+encoder = pkl.load(en_md)
 
 input_md = open('lrc_vsfc.pkl', 'rb')
 model = pkl.load(input_md)
