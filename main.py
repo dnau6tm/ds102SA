@@ -5,7 +5,7 @@ import pandas as pd
 from sklearn.feature_extraction.text import CountVectorizer
 
 
-class_list = {'0': 'Positive', '1': 'Neutral', '2': 'Negative'}
+class_list = {'0': 'Negative', '1': 'Neutral', '2': 'Positve'}
 
 # X_train = pd.read_csv('./sents.txt', sep='\r\n', header=None, index_col=None, names = ['sents'])
 
